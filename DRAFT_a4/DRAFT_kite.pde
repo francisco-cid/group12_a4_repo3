@@ -49,6 +49,7 @@ class Kite {
     pushMatrix();
     rotate(radians(kiteAngle));
     bezier(sx, sy, sx + 60, sy + 40, sx - 20, sy + 150, sx + 105, sy + 170);
+    bezier(sx + 330, sy, sx + 60 + 330, sy + 40, sx - 20 + 330, sy + 150, sx + 105 + 330, sy + 170);
     popMatrix();
   } 
 
@@ -62,8 +63,8 @@ class Kite {
 
     //string
     this.sx -= this.speed;
-    if (this.sx < -145){
-      this.sx = width + 70;
+    if (this.sx < -315){
+      this.sx = width - 100;
     }
 
     //rotates kite and string

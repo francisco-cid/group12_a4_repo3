@@ -1,0 +1,1 @@
+open the file and allow the download. The main code is in the tab titled group_12_assignment4 and should also be in a folder titled that. Click the play button and allow for the animation to run.

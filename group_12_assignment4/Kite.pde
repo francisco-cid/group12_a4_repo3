@@ -3,7 +3,7 @@ class Kite {
   float x, y, kiteAngle, kiteChange, speed;
   final int KITE_ANGLE_LIMIT;
   //string variables 
-  float sx, sy; 
+  
 
 
 
@@ -15,11 +15,10 @@ class Kite {
     kiteChange = 0.08;
     KITE_ANGLE_LIMIT = 2;
 
-    sx = 0;
-    sy =0;
+    
   }
 
-  Kite(float x, float y, float sx, float sy, float kiteAngle, float kiteChange, final int KITE_ANGLE_LIMIT, float speed) {
+  Kite(float x, float y, float kiteAngle, float kiteChange, final int KITE_ANGLE_LIMIT, float speed) {
     this.x =x;
     this.y =y;
 
@@ -27,8 +26,7 @@ class Kite {
     this.kiteChange = kiteChange;
     this.KITE_ANGLE_LIMIT = KITE_ANGLE_LIMIT;
 
-    this.sx = sx; 
-    this.sy = sy;
+
     
     this.speed = speed;
   }
@@ -43,14 +41,7 @@ class Kite {
     triangle(x, y, x + 130, y - 20, x + 20, ((y + 40)/2));
     popMatrix();
 
-    //string 
-    noFill();
-    stroke(0);
-    pushMatrix();
-    rotate(radians(kiteAngle));
-    bezier(sx, sy, sx + 60, sy + 40, sx - 20, sy + 150, sx + 105, sy + 170);
-    bezier(sx + 330, sy, sx + 60 + 330, sy + 40, sx - 20 + 330, sy + 150, sx + 105 + 330, sy + 170);
-    popMatrix();
+    
   } 
 
   void move() {
@@ -61,11 +52,6 @@ class Kite {
       this.x = width + 20;
     }
 
-    //string
-    this.sx -= this.speed;
-    if (this.sx < -285){
-      this.sx = width - 70;
-    }
 
     //rotates kite and string
     kiteAngle += kiteChange;

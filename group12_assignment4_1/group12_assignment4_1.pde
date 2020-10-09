@@ -3,6 +3,8 @@ Bird bird1;
 Bird bird2;
 Kite kite1;
 Kite kite2;
+strings string1;
+strings string2;
 Kid kid1;
 Kid kid2;
 Mountains mountains;
@@ -19,8 +21,10 @@ void setup(){
   bicycle = new Bicycle(325, 410, speed * 3);
   bird1 = new Bird(100,50,100, speed / 1.25);
   bird2 = new Bird(75,75,100, speed / 1.25);
-  kite1 = new Kite(170,111, 220, 151, 0, 0.08, 2, speed);
-  kite2 = new Kite(500,111, 220, 151, 0, 0.08, 2, speed);
+  kite1 = new Kite(170,111, 0, 0.08, 2, speed);
+  kite2 = new Kite(500,111, 0, 0.08, 2, speed);
+  string1 = new strings(220, 151, 0, 0.08, 2, speed);
+  string2 = new strings(550, 151, 0, 0.08, 2, speed);
   kid1 = new Kid(345,326,0,0, 0.45, 9,flesh,orange, blue, speed);
   kid2 = new Kid(675,326,0,0, 0.45, 9,flesh,orange, blue, speed);
   mountains = new Mountains();
@@ -40,9 +44,13 @@ void draw(){
   //display kite
   kite1.display();
   kite2.display();
+  string1.display();
+  string2.display();
   //move kite
   kite1.move();
   kite2.move();
+  string1.move();
+  string2.move();
   
   //display Kid
   kid1.display();
